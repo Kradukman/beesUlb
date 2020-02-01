@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- FORM VIEW -->
+    <record model="ir.ui.view" id="view_place_form">
+        <field name="name">place.place.form</field>
+        <field name="model">place.place</field>
+        <field name="arch" type="xml">
+            <form string="Place Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="owner_id"/>
+                            <field name="latitude"/>
+                            <field name="longitude"/>
+                        </group>
+                        <group>
+                            <field name="city_id"/>
+                            <field name="state_id"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Dates of Sampling">
+                            <field name="date_of_sampling_ids">
+                                <tree>
+                                    <field name="date"/>
+                                    <field name="weather_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="view_place_tree" model="ir.ui.view">
+        <field name="name">place.place.tree</field>
+        <field name="model">place.place</field>
+        <field name="arch" type="xml">
+            <tree string="Place Tree">
+                <field name="name"/>
+                <field name="owner_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
+

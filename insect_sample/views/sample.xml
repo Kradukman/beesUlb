@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>insect
+
+        <record model="ir.ui.view" id="view_sample_form">
+            <field name="name">insect.sample.sample.form</field>
+            <field name="model">insect.sample.sample</field>
+            <field name="arch" type="xml">
+                <form string="Sample Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <h2>Place</h2>
+                                <field name="place_id"/>
+                                <field name="city_id"/>
+                                <field name="state_id"/>
+                                <field name="country_id"/>
+                            </group>
+                            <group>
+                                <h2>Insect</h2>
+                                <field name="specie_id"/>
+                                <field name="genus_id"/>
+                                <field name="family_id"/>
+                            </group>
+                            <group>
+                                <h2>Plant</h2>
+                                <field name='plant_id'/>
+                                <field name='plant_genus_id'/>
+                                <field name='plant_family_id'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sample_tree" model="ir.ui.view">
+            <field name="name">insect.sample.sample.tree</field>
+            <field name="model">insect.sample.sample</field>
+            <field name="arch" type="xml">
+                <tree string="Sample Tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+</odoo>
+

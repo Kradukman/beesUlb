@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_specie,access_specie,model_insect_specie,base.group_user,1,1,1,0
+access_genus,access_genus,model_insect_genus,base.group_user,1,1,1,0
+access_family,access_family,model_insect_family,base.group_user,1,1,1,0

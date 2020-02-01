@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record model="ir.ui.view" id="view_specie_form">
+            <field name="name">insect.specie.form</field>
+            <field name="model">insect.specie</field>
+            <field name="arch" type="xml">
+                <form string="Specie Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="genus_id"/>
+                            <field name="family_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_specie_tree" model="ir.ui.view">
+            <field name="name">insect.specie.tree</field>
+            <field name="model">insect.specie</field>
+            <field name="arch" type="xml">
+                <tree string="Specie Tree">
+                    <field name="name"/>
+                    <field name="genus_id"/>
+                    <field name="family_id"/>
+                </tree>
+            </field>
+        </record>
+</odoo>
+

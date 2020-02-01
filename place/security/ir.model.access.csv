@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_place,access_place,model_place_place,base.group_user,1,1,1,0
+access_date_of_sampling,access_date_of_sampling,model_place_date_of_sampling,base.group_user,1,1,1,0
+access_weather,access_weather,model_place_weather,base.group_user,1,1,1,0
+access_city,access_city,model_place_city,base.group_user,1,1,1,0

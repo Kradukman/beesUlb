@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- FORM VIEW -->
+    <record model="ir.ui.view" id="view_date_of_sampling_form">
+        <field name="name">place.date.of.sampling.form</field>
+        <field name="model">place.date.of.sampling</field>
+        <field name="arch" type="xml">
+            <form string="Date of sampling Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <h1><field name="date"/></h1>
+                        </group>
+                        <group>
+                            <field name="min_temperature"/>
+                            <field name="max_temperature"/>
+                        </group>
+                        <group>
+                            <field name="weather_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="view_date_of_sampling_tree" model="ir.ui.view">
+        <field name="name">place.date.of.sampling.tree</field>
+        <field name="model">place.date.of.sampling</field>
+        <field name="arch" type="xml">
+            <tree string="Date of sampling Tree">
+                <field name="id"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>
+

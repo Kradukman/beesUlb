@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record model="ir.ui.view" id="view_genus_form">
+            <field name="name">plant.genus.form</field>
+            <field name="model">plant.genus</field>
+            <field name="arch" type="xml">
+                <form string="Genus Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="family_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_genus_tree" model="ir.ui.view">
+            <field name="name">plant.genus.tree</field>
+            <field name="model">plant.genus</field>
+            <field name="arch" type="xml">
+                <tree string="Genus Tree">
+                    <field name="name"/>
+                    <field name="family_id"/>
+                </tree>
+            </field>
+        </record>
+</odoo>
+
