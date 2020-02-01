@@ -1,4 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_specie,access_specie,model_plant_specie,base.group_user,1,1,1,0
-access_genus,access_genus,model_plant_genus,base.group_user,1,1,1,0
-access_family,access_family,model_plant_family,base.group_user,1,1,1,0
+access_specie_user,access_specie,model_plant_specie,base.group_user,1,0,0,0
+access_genus_user,access_genus,model_plant_genus,base.group_user,1,0,0,0
+access_family_user,access_family,model_plant_family,base.group_user,1,0,0,0
+
+access_specie,access_specie,model_plant_specie,base.group_user,1,0,0,0
+access_genus,access_genus,model_plant_genus,base.group_user,1,0,0,0
+access_family,access_family,model_plant_family,base.group_user,1,0,0,0

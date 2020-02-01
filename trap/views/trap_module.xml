@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-        <record model="ir.actions.act_window" id="plant_specie_list_action">
-            <field name="name">Plant</field>
-            <field name="res_model">plant.specie</field>
+        <record model="ir.actions.act_window" id="trap_trap_list_action">
+            <field name="name">Trap</field>
+            <field name="res_model">trap.trap</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Create plant
+                <p class="o_view_nocontent_smiling_face">Create trap
                 </p>
             </field>
         </record>
 
         <!-- top level menu: no parent -->
-        <menuitem id="main_plant_menu" name="Plant"/>
+        <menuitem id="main_trap_menu" name="Trap" groups="base.group_erp_manager"/>
         <!-- A first level in the left side menu is needed
              before using action= attribute -->
-        <menuitem id="plant_menu" name="Plant"
-                  parent="main_plant_menu"/>
+        <menuitem id="trap_menu" name="Trap"
+                  parent="main_trap_menu"/>
         <!-- the following menuitem should appear *after*
              its parent openacademy_menu and *after* its
              action course_list_action -->
-        <menuitem id="plant_specie_menu" name="Family" parent="plant_menu"
-                  action="plant_specie_list_action"/>
+        <menuitem id="trap_trap_menu" name="Trap" parent="trap_menu"
+                  action="trap_trap_list_action"/>
         <!-- Full id location:
              action="openacademy.course_list_action"
              It is not required when it is the same module -->

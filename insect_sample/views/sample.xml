@@ -24,9 +24,12 @@
                             </group>
                             <group>
                                 <h2>Plant</h2>
-                                <field name='plant_id'/>
-                                <field name='plant_genus_id'/>
-                                <field name='plant_family_id'/>
+                                <field name="plant_id"/>
+                                <field name="plant_genus_id"/>
+                                <field name="plant_family_id"/>
+                            </group>
+                            <group>
+                                <field name="is_validated"/>
                             </group>
                         </group>
                     </sheet>

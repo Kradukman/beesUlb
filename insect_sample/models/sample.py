@@ -20,3 +20,5 @@ class InsectSample(models.Model):
     plant_id = fields.Many2one('plant.specie', string='Plant specie')
     plant_genus_id = fields.Many2one('plant.genus', related='plant_id.genus_id', string='Plant genus', readonly=True)
     plant_family_id = fields.Many2one('plant.family', related='plant_id.family_id', string='Plant family', readonly=True)
+
+    is_validated = fields.Boolean('Has been validated', groups='base.group_erp_manager')

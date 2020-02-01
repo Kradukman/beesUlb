@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 {
-    'name': 'plant_ulb',
+    'name': 'trap_ulb',
     'version': '13.0',
-    'description': """Manage plant""",
+    'description': """Manage trap""",
 
     'depends': [
         'base',
@@ -19,10 +19,8 @@
         'security/ir.model.access.csv',
 
         # views
-        'views/plant.xml',
-        'views/specie.xml',
-        'views/genus.xml',
-        'views/family.xml',
+        'views/trap_module.xml',
+        'views/trap.xml',
     ],
     'installable': True,
     'auto_install': False,
