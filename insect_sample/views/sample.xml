@@ -30,6 +30,7 @@
                             </group>
                             <group>
                                 <field name="is_validated"/>
+                                <field name="sampler_id"/>
                             </group>
                         </group>
                     </sheet>
