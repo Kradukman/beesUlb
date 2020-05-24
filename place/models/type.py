@@ -1,8 +1,8 @@
 from odoo import api, fields, models, _
 
 
-class TrapTrap(models.Model):
-    _name = "trap.trap"
-    _description = "Trap Trap"
+class PlaceType(models.Model):
+    _name = "place.type"
+    _description = "Place Type"
 
     name = fields.Char('Name', required=True)

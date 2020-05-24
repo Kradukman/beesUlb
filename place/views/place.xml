@@ -12,23 +12,38 @@
                         <group>
                             <field name="name"/>
                             <field name="owner_id"/>
+                            <field name="type_id"/>
                             <field name="latitude"/>
                             <field name="longitude"/>
+                            <field name="crop_id"/>
+                            <field name="management_id"/>
                         </group>
                         <group>
                             <field name="city_id"/>
                             <field name="state_id"/>
                             <field name="country_id"/>
+                            <field name="country_code"/>
                         </group>
                     </group>
                     <notebook>
                         <page string="Dates of Sampling">
-                            <field name="date_of_sampling_ids">
-                                <tree>
-                                    <field name="date"/>
-                                    <field name="weather_id"/>
-                                </tree>
-                            </field>
+                            <group>
+                                <field name="date_of_sampling_ids">
+                                    <tree>
+                                        <field name="date"/>
+                                        <field name="weather_id"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Cultivar">
+                            <group>
+                                <field name="cultivar_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>

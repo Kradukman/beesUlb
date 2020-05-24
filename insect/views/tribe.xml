@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_insect_tribe_form" model="ir.ui.view">
+        <field name="name">insect.tribe.form</field>
+        <field name="model">insect.tribe</field>
+        <field name="arch" type="xml">
+            <form string="Tribe Form">
+                <sheet>
+                        <group>
+                            <h1><field name="name"/></h1>
+                        </group>
+                        <group>
+                            <field name="super_family_id"/>
+                            <field name="family_id"/>
+                            <field name="sub_family_id"/>
+                        </group>
+                    </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tribe_tree" model="ir.ui.view">
+        <field name="name">insect.tribe.tree</field>
+        <field name="model">insect.tribe</field>
+        <field name="arch" type="xml">
+            <tree string="Tribe Tree">
+                <field name="name"/>
+                <field name="super_family_id"/>
+                <field name="family_id"/>
+                <field name="sub_family_id"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

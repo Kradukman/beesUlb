@@ -6,6 +6,7 @@
 
     'depends': [
         'base',
+        'mail',
     ],
     'data': [
         # assets
@@ -21,8 +22,12 @@
         # views
         'views/insect.xml',
         'views/specie.xml',
+        'views/sub_specie.xml',
         'views/genus.xml',
         'views/family.xml',
+        'views/super_family.xml',
+        'views/sub_family.xml',
+        'views/tribe.xml',
     ],
     'installable': True,
     'auto_install': False,

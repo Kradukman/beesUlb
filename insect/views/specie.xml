@@ -1,32 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-        <record model="ir.ui.view" id="view_specie_form">
-            <field name="name">insect.specie.form</field>
-            <field name="model">insect.specie</field>
-            <field name="arch" type="xml">
-                <form string="Specie Form">
-                    <sheet>
+    <record model="ir.ui.view" id="view_specie_form">
+        <field name="name">insect.specie.form</field>
+        <field name="model">insect.specie</field>
+        <field name="arch" type="xml">
+            <form string="Specie Form">
+                <sheet>
+                    <group>
+                        <h1><field name="name"/></h1>
+                    </group>
+                    <group>
                         <group>
-                            <field name="name"/>
+                            <field name="specie"/>
                             <field name="genus_id"/>
-                            <field name="family_id"/>
+                            <field name="tribe_id"/>
                         </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
+                        <group>
+                            <field name="sub_family_id"/>
+                            <field name="family_id"/>
+                            <field name="super_family_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="info" string="Info">
+                            <group>
+                                <group>
+                                    <field name="nesting_id"/>
+                                    <field name="sociality_id"/>
+                                    <field name="pollen_transport_id"/>
+                                    <field name="tongue_id"/>
+                                    <field name="season_id"/>
+                                </group>
+                                <group>
+                                    <field name="lecty_id"/>
+                                    <field name="diet_breath_id"/>
+                                    <field name="eu_iucn_status_id"/>
+                                    <field name="be_iucn_status_id"/>
+                                    <field name="introduced_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="comment" string="Comment">
+                            <group>
+                                <field name="comment" widget="html"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <record id="view_specie_tree" model="ir.ui.view">
-            <field name="name">insect.specie.tree</field>
-            <field name="model">insect.specie</field>
-            <field name="arch" type="xml">
-                <tree string="Specie Tree">
-                    <field name="name"/>
-                    <field name="genus_id"/>
-                    <field name="family_id"/>
-                </tree>
-            </field>
-        </record>
+    <record id="view_specie_tree" model="ir.ui.view">
+        <field name="name">insect.specie.tree</field>
+        <field name="model">insect.specie</field>
+        <field name="arch" type="xml">
+            <tree string="Specie Tree">
+                <field name="name"/>
+                <field name="super_family_id"/>
+                <field name="family_id"/>
+                <field name="sub_family_id"/>
+                <field name="tribe_id"/>
+            </tree>
+        </field>
+    </record>
+
 </odoo>
 

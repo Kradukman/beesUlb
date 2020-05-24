@@ -6,9 +6,12 @@
 
     'depends': [
         'base',
+        'mail',
+        'contacts',
         'insect',
         'place',
         'plant',
+        'project_ulb',
     ],
     'data': [
         # assets

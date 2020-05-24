@@ -6,6 +6,7 @@
 
     'depends': [
         'base',
+        'mail',
         'contacts',
     ],
     'data': [

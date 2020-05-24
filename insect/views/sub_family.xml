@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record model="ir.ui.view" id="view_genus_form">
-        <field name="name">insect.genus.form</field>
-        <field name="model">insect.genus</field>
+    <record id="view_insect_sub_family_form" model="ir.ui.view">
+        <field name="name">insect.sub.family.form</field>
+        <field name="model">insect.sub.family</field>
         <field name="arch" type="xml">
-            <form string="Genus Form">
+            <form string="Sub Family Form">
                 <sheet>
                     <group>
                         <h1><field name="name"/></h1>
@@ -13,27 +13,22 @@
                     <group>
                         <field name="super_family_id"/>
                         <field name="family_id"/>
-                        <field name="sub_family_id"/>
-                        <field name="tribe_id"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <record id="view_genus_tree" model="ir.ui.view">
-        <field name="name">insect.genus.tree</field>
-        <field name="model">insect.genus</field>
+    <record id="view_sub_family_tree" model="ir.ui.view">
+        <field name="name">insect.sub.family.tree</field>
+        <field name="model">insect.sub.family</field>
         <field name="arch" type="xml">
-            <tree string="Genus Tree">
+            <tree string="Sub Family Tree">
                 <field name="name"/>
                 <field name="super_family_id"/>
                 <field name="family_id"/>
-                <field name="sub_family_id"/>
-                <field name="tribe_id"/>
             </tree>
         </field>
     </record>
 
 </odoo>
-

@@ -1,11 +1,13 @@
 # -*- encoding: utf-8 -*-
 {
-    'name': 'trap_ulb',
+    'name': 'project_ulb',
     'version': '13.0',
-    'description': """Manage trap""",
+    'description': """Manage Project, extend project""",
 
     'depends': [
         'base',
+        'contacts',
+        'place',
     ],
     'data': [
         # assets
@@ -14,13 +16,11 @@
         # fields
         # actions
         # reports
-
-        # securityvehicles_brands
+        # security
         'security/ir.model.access.csv',
-
         # views
-        'views/trap_module.xml',
-        'views/trap.xml',
+        'views/project_ulb_module.xml',
+        'views/project.xml',
     ],
     'installable': True,
     'auto_install': False,

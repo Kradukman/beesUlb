@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- FORM VIEW -->
+    <record model="ir.ui.view" id="project_view_form">
+        <field name="name">project_ulb.project_view_form</field>
+        <field name="model">project_ulb.project</field>
+        <field name="arch" type="xml">
+            <form string="Project Form">
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="year"/>
+                            <field name="leader_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sites">
+                            <field name="site_ids">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="view_project_ulb_tree" model="ir.ui.view">
+        <field name="name">project_ulb.project.tree</field>
+        <field name="model">project_ulb.project</field>
+        <field name="arch" type="xml">
+            <tree string="Place Tree">
+                <field name="name"/>
+                <field name="year"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
+

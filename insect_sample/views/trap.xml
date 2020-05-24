@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_trap_trap_form" model="ir.ui.view">
-        <field name="name">trap.trap.form</field>
-        <field name="model">trap.trap</field>
+    <record id="view_insect_sample_trap_form" model="ir.ui.view">
+        <field name="name">insect.sample.trap.form</field>
+        <field name="model">insect.sample.trap</field>
         <field name="arch" type="xml">
             <form string="Trap Form">
                 <sheet>
@@ -14,8 +14,8 @@
     </record>
 
     <record id="view_trap_tree" model="ir.ui.view">
-            <field name="name">trap.trap.tree</field>
-            <field name="model">trap.trap</field>
+            <field name="name">insect.sample.trap.tree</field>
+            <field name="model">insect.sample.trap</field>
             <field name="arch" type="xml">
                 <tree string="Trap Tree">
                     <field name="name"/>

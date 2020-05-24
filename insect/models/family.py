@@ -6,3 +6,5 @@ class InsectFamily(models.Model):
     _description = "Insect Family"
 
     name = fields.Char('Name', required=True)
+    position = fields.Char('Position')
+    super_family_id = fields.Many2one('insect.super.family', string='Super Family', required=True)

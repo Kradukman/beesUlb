@@ -4,3 +4,6 @@
 .pydevproject
 .settings
 *.zip
+*.pyc
+__pycache__/
+*.pycache

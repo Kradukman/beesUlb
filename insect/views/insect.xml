@@ -1,29 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-        <record model="ir.actions.act_window" id="insect_specie_list_action">
-            <field name="name">Insect</field>
-            <field name="res_model">insect.specie</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Create insect
-                </p>
-            </field>
-        </record>
-
-        <!-- top level menu: no parent -->
-        <menuitem id="main_insect_menu" name="Insect" groups="base.group_erp_manager"/>
-        <!-- A first level in the left side menu is needed
+      <!-- top level menu: no parent -->
+     <menuitem id="main_insect_menu" name="Insect" groups="base.group_erp_manager"/>
+     <!-- A first level in the left side menu is needed
              before using action= attribute -->
-        <menuitem id="insect_menu" name="Insect"
-                  parent="main_insect_menu"/>
-        <!-- the following menuitem should appear *after*
-             its parent openacademy_menu and *after* its
-             action course_list_action -->
-        <menuitem id="insect_specie_menu" name="Family" parent="insect_menu"
-                  action="insect_specie_list_action"/>
-        <!-- Full id location:
-             action="openacademy.course_list_action"
-             It is not required when it is the same module -->
+     <menuitem id="insect_menu" name="Insect" parent="main_insect_menu"/>
+
+     <record model="ir.actions.act_window" id="insect_specie_list_action">
+          <field name="name">Insect Specie</field>
+          <field name="res_model">insect.specie</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create insect specie
+               </p>
+          </field>
+     </record>
+
+     <record model="ir.actions.act_window" id="insect_super_family_list_action">
+        <field name="name">Insect Super Family</field>
+        <field name="res_model">insect.super.family</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create insect super family
+            </p>
+        </field>
+     </record>
+
+     <record model="ir.actions.act_window" id="insect_family_list_action">
+        <field name="name">Insect Family</field>
+        <field name="res_model">insect.family</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create insect family
+            </p>
+        </field>
+    </record>
+
+     <record model="ir.actions.act_window" id="insect_sub_family_list_action">
+        <field name="name">Insect Sub Family</field>
+        <field name="res_model">insect.sub.family</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create insect sub family
+            </p>
+        </field>
+    </record>
+
+     <record model="ir.actions.act_window" id="insect_tribe_list_action">
+        <field name="name">Insect Tribe</field>
+        <field name="res_model">insect.tribe</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create insect tribe
+            </p>
+        </field>
+     </record>
+
+     <record model="ir.actions.act_window" id="insect_genus_list_action">
+          <field name="name">Insect Genus</field>
+          <field name="res_model">insect.genus</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create insect genus
+               </p>
+          </field>
+     </record>
+
+     <record model="ir.actions.act_window" id="insect_sub_specie_list_action">
+          <field name="name">Insect Sub Specie</field>
+          <field name="res_model">insect.sub.specie</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create insect sub specie
+               </p>
+          </field>
+     </record>
+
+     <menuitem id="insect_super_family_menu" name="Super Family" parent="insect_menu"
+                action="insect_super_family_list_action" sequence="1"/>
+
+     <menuitem id="insect_family_menu" name="Family" parent="insect_menu"
+                action="insect_family_list_action" sequence="2"/>
+
+     <menuitem id="insect_sub_family_menu" name="Sub Family" parent="insect_menu"
+                action="insect_sub_family_list_action" sequence="3"/>
+
+     <menuitem id="insect_tribe_menu" name="Tribe" parent="insect_menu"
+                action="insect_tribe_list_action" sequence="4"/>
+
+     <menuitem id="insect_genus_menu" name="Genus" parent="insect_menu"
+                action="insect_genus_list_action" sequence="5"/>
+
+     <menuitem id="insect_specie_menu" name="Specie" parent="insect_menu"
+                action="insect_specie_list_action" sequence="6"/>
+
+     <menuitem id="insect_sub_specie_menu" name="Sub Specie" parent="insect_menu"
+               action="insect_sub_specie_list_action" sequence="7"/>
 
 </odoo>

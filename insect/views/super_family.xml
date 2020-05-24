@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_insect_super_family_form" model="ir.ui.view">
+        <field name="name">insect.super.family.form</field>
+        <field name="model">insect.super.family</field>
+        <field name="arch" type="xml">
+            <form string="Super Family Form">
+                <sheet>
+                    <field name="name" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_super_family_tree" model="ir.ui.view">
+        <field name="name">insect.super.family.tree</field>
+        <field name="model">insect.super.family</field>
+        <field name="arch" type="xml">
+            <tree string="Super Family Tree">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>
