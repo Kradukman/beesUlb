@@ -23,6 +23,7 @@
         'views/specie.xml',
         'views/genus.xml',
         'views/family.xml',
+        'views/wizard.xml',
     ],
     'installable': True,
     'auto_install': False,

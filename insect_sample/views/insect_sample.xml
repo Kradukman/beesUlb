@@ -1,29 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-        <record model="ir.actions.act_window" id="insect_sample_sample_list_action">
-            <field name="name">Sample</field>
-            <field name="res_model">insect.sample.sample</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Create sample
-                </p>
-            </field>
-        </record>
+     <record model="ir.actions.act_window" id="insect_sample_sample_list_action">
+          <field name="name">Sample</field>
+          <field name="res_model">insect.sample.sample</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create sample
+               </p>
+          </field>
+     </record>
+     <record model="ir.actions.act_window" id="insect_sample_project_list_action">
+          <field name="name">Project</field>
+          <field name="res_model">project_ulb.project</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create Project
+               </p>
+          </field>
+     </record>
+     <record model="ir.actions.act_window" id="insect_sample_place_list_action">
+          <field name="name">Place</field>
+          <field name="res_model">place.place</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create Place
+               </p>
+          </field>
+     </record>
+     <record model="ir.actions.act_window" id="insect_sample_sex_list_action">
+          <field name="name">Sex</field>
+          <field name="res_model">insect.sample.sex</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create Sex
+               </p>
+          </field>
+     </record>
+     <record model="ir.actions.act_window" id="insect_sample_trap_list_action">
+          <field name="name">Trap</field>
+          <field name="res_model">insect.sample.trap</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create Trap
+               </p>
+          </field>
+     </record>
+     <record model="ir.actions.act_window" id="insect_sample_physical_status_list_action">
+          <field name="name">Physical Status</field>
+          <field name="res_model">insect.sample.physical.status</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create Physical Status
+               </p>
+          </field>
+     </record>
+     <record model="ir.actions.act_window" id="insect_sample_collection_status_list_action">
+          <field name="name">Collection Status</field>
+          <field name="res_model">insect.sample.collection.status</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create Collection Status
+               </p>
+          </field>
+     </record>
 
-        <!-- top level menu: no parent -->
-        <menuitem id="main_insect_sample_menu" name="Sample"/>
-        <!-- A first level in the left side menu is needed
-             before using action= attribute -->
-        <menuitem id="insect_sample_menu" name="Sample"
-                  parent="main_insect_sample_menu"/>
-        <!-- the following menuitem should appear *after*
-             its parent openacademy_menu and *after* its
-             action course_list_action -->
-        <menuitem id="insect_sample_sample_menu" name="Family" parent="insect_sample_menu"
-                  action="insect_sample_sample_list_action"/>
+     <!-- top level menu: no parent -->
+     <menuitem id="main_insect_sample_menu" name="Sample"/>
+     <!-- A first level in the left side menu is needed
+          before using action= attribute -->
+     <menuitem id="insect_sample_menu" name="Sample"
+               parent="main_insect_sample_menu"/>
+     <!-- the following menuitem should appear *after*
+          its parent openacademy_menu and *after* its
+          action course_list_action -->
+     <menuitem id="insect_sample_project_menu" name="Project" parent="main_insect_sample_menu"
+          action="insect_sample_project_list_action"/>
+     <menuitem id="insect_sample_place_menu" name="Project" parent="main_insect_sample_menu"
+               action="insect_sample_place_list_action"/>
+     <menuitem id="insect_sample_sample_menu" name="Sample" parent="insect_sample_menu"
+               action="insect_sample_sample_list_action"/>
+     <menuitem id="insect_sample_sex_menu" name="Sex" parent="insect_sample_menu"
+               action="insect_sample_sex_list_action"/>
+     <menuitem id="insect_sample_trap_menu" name="Trap" parent="insect_sample_menu"
+               action="insect_sample_trap_list_action"/>
+     <menuitem id="insect_sample_physical_status_menu" name="Physical Status" parent="insect_sample_menu"
+               action="insect_sample_physical_status_list_action"/>
+     <menuitem id="insect_sample_collection_status_menu" name="Collection Status" parent="insect_sample_menu"
+               action="insect_sample_collection_status_list_action"/>
+     
         <!-- Full id location:
              action="openacademy.course_list_action"
              It is not required when it is the same module -->
-
+     <record model="ir.actions.act_window" id="insect_sample_wizard_import_form_action">
+          <field name="name">Import</field>
+          <field name="res_model">insect.sample.import.wizard</field>
+          <field name="view_mode">form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Import
+               </p>
+          </field>
+     </record>
+     <menuitem id="sample_import_menu" name="Import" parent="main_insect_sample_menu"
+               action="insect_sample_wizard_import_form_action"/>
 </odoo>

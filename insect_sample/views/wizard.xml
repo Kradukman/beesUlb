@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_insect_sample_duplicate_wizard" model="ir.ui.view">
+        <field name="name">insect.sample.duplicate.wizard.form</field>
+        <field name="model">insect.sample.duplicate.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Insect sample duplicate Wizard Form">
+                <sheet>
+                    <h1>Duplicate</h1>
+                    <group>
+                        <field name="duplicate_number"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="duplicate_sample" string="Duplicate" type="object" class="btn btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_insect_sample_import_wizard_form" model="ir.ui.view">
+        <field name="name">insect.sample.import.wizard.form</field>
+        <field name="model">insect.sample.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Sample Import Wizard Form">
+                <sheet>
+                    <h1>Import</h1>
+                    <h2>Infos</h2>
+                    Date should be in format Year - Month - Day
+                    
+                    <group>
+                        <group>
+                            <field name="csv_file"/>
+                            <field name="start_line"/>
+                            <field name="separator"/>
+                            <field name="place_name_col"/>
+                            <field name="project_name_col"/>
+                            <field name="trap_name_col"/>
+                            <field name="physical_status_name_col"/>
+                            <field name="sampling_date_col"/>
+                            <field name="sampler_name_col"/>
+                            <label for="state_col"/>
+                            <div>
+                                <field name="has_state" class="oe_inline"/>
+                                <field name="state_col" class="oe_inline" attrs="{'invisible': [('has_state','=',False)]}"/>
+                            </div>
+                            <field name="state_possible_value"/>
+                            <label for="identifier_name_col"/>
+                            <div>
+                                <field name="has_identifier_name" class="oe_inline"/>
+                                <field name="identifier_name_col" class="oe_inline" attrs="{'invisible': [('has_identifier_name','=',False)]}"/>
+                            </div>
+                            <label for="genus_name_col"/>
+                            <div>
+                                <field name="has_genus_name" class="oe_inline"/>
+                                <field name="genus_name_col" class="oe_inline" attrs="{'invisible': [('has_genus_name','=',False)]}"/>
+                            </div>
+                            <label for="specie_name_col"/>
+                            <div>
+                                <field name="has_specie_name" class="oe_inline"/>
+                                <field name="specie_name_col" class="oe_inline" attrs="{'invisible': [('has_specie_name','=',False)]}"/>
+                            </div>
+                            <label for="subspecie_name_col"/>
+                            <div>
+                                <field name="has_subspecie_name" class="oe_inline"/>
+                                <field name="subspecie_name_col" class="oe_inline" attrs="{'invisible': [('has_subspecie_name','=',False)]}"/>
+                            </div>
+                            <label for="sex_col"/>
+                            <div>
+                                <field name="has_sex" class="oe_inline"/>
+                                <field name="sex_col" class="oe_inline" attrs="{'invisible': [('has_sex','=',False)]}"/>
+                            </div>
+                            <label for="collection_status_name_col"/>
+                            <div>
+                                <field name="has_collection_status_name" class="oe_inline"/>
+                                <field name="collection_status_name_col" class="oe_inline" attrs="{'invisible': [('has_collection_status_name','=',False)]}"/>
+                            </div>
+                            <label for="remark_col"/>
+                            <div>
+                                <field name="has_remark" class="oe_inline"/>
+                                <field name="remark_col" class="oe_inline" attrs="{'invisible': [('has_remark','=',False)]}"/>
+                            </div>
+                            <label for="legacy_name_col"/>
+                            <div>
+                                <field name="has_legacy_name" class="oe_inline"/>
+                                <field name="legacy_name_col" class="oe_inline" attrs="{'invisible': [('has_legacy_name','=',False)]}"/>
+                            </div>
+                        </group>
+                    </group>
+                    <button name="action_import" string="import" type="object" class="btn btn-primary"/>
+                    <notebook>
+                        <page name="message" string="Message">
+                            <group>
+                                <field name="error_message"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -98,4 +98,16 @@
      <menuitem id="insect_sub_specie_menu" name="Sub Specie" parent="insect_menu"
                action="insect_sub_specie_list_action" sequence="7"/>
 
+     <record model="ir.actions.act_window" id="insect_wizard_import_form_action">
+          <field name="name">Import</field>
+          <field name="res_model">insect.import.wizard</field>
+          <field name="view_mode">form</field>
+          <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Import
+               </p>
+          </field>
+     </record>
+     <menuitem id="insect_import_menu" name="Import" parent="main_insect_menu"
+               action="insect_wizard_import_form_action"/>
+
 </odoo>

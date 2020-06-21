@@ -6,32 +6,57 @@
             <field name="model">insect.sample.sample</field>
             <field name="arch" type="xml">
                 <form string="Sample Form">
+                    <header>
+                        <field name="id" invisible="1"/>
+                        <button name="open_duplicate_wizard" string="Duplicate" type="object" class="btn-primary"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,validated"/>
+                    </header>
                     <sheet>
                         <h1><field name="name"/></h1>
                         <group>
                             <group>
-                                <h2>Place</h2>
-                                <field name="place_id"/>
-                                <field name="city_id"/>
-                                <field name="state_id"/>
-                                <field name="country_id"/>
-                            </group>
-                            <group>
-                                <h2>Insect</h2>
-                                <field name="specie_id"/>
-                                <field name="genus_id"/>
-                            </group>
-                            <group>
-                                <h2>Plant</h2>
-                                <field name="plant_id"/>
-                                <field name="plant_genus_id"/>
-                                <field name="plant_family_id"/>
-                            </group>
-                            <group>
-                                <field name="is_validated"/>
+                                <field name="project_id"/>
+                                <field name="place_id" domain="[('project_ids', 'in', project_id)]"/>
                                 <field name="sampler_id"/>
+                                <field name="trap_id"/>
+                                <field name="sampling_date"/>
+                                <field name="physical_status_id"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page name="place" string="Place">
+                                <group>
+                                    <h2>Place</h2>
+                                    <field name="city_id"/>
+                                    <field name="state_id"/>
+                                    <field name="country_id"/>
+                                </group>
+                            </page>
+                            <page name="insect" string="Insect">
+                                <group>
+                                    <h2>Insect</h2>
+                                    <group>
+                                        <field name="identifier_id"/>
+                                        <field name="specie_id"/>
+                                        <field name="genus_id"/>
+                                        <field name="sex_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page name="plant" string="Plant">
+                                <group>
+                                    <h2>Plant</h2>
+                                    <field name="plant_id"/>
+                                    <field name="plant_genus_id"/>
+                                    <field name="plant_family_id"/>
+                                </group>
+                            </page>
+                            <page name="other_info" string="Other info">
+                                <group>
+                                    <field name="legacy_name"/>
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
@@ -52,4 +77,3 @@
             </field>
         </record>
 </odoo>
-

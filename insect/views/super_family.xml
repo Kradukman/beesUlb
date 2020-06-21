@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <form string="Super Family Form">
                 <sheet>
-                    <field name="name" />
+                    <field name="name"/>
                 </sheet>
             </form>
         </field>

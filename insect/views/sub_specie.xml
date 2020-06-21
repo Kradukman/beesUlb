@@ -23,7 +23,7 @@
         </field>
     </record>
 
-    <record id="view_specie_tree" model="ir.ui.view">
+    <record id="view_sub_specie_tree" model="ir.ui.view">
         <field name="name">insect.sub.specie.tree</field>
         <field name="model">insect.sub.specie</field>
         <field name="arch" type="xml">
@@ -39,4 +39,3 @@
     </record>
 
 </odoo>
-

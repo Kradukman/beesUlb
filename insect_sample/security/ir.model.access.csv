@@ -1,8 +1,12 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_trap_user,access_trap_user,model_insect_sample_trap,base.group_user,1,0,0,0
 access_sex_user,access_sex_user,model_insect_sample_sex,base.group_user,1,0,0,0
+access_physical_status_user,access_physical_status_user,model_insect_sample_physical_status,base.group_user,1,0,0,0
+access_collection_status_user,access_collection_status_user,model_insect_sample_collection_status,base.group_user,1,0,0,0
 
 
-access_sample,access_sample,model_insect_sample_sample,base.group_user,1,1,1,0
-access_trap,access_trap,model_insect_sample_trap,base.group_erp_manager,1,1,1,0
-access_sex,access_sex,model_insect_sample_sex,base.group_user,1,1,1,0
+access_sample,access_sample,model_insect_sample_sample,base.group_user,1,1,1,1
+access_trap,access_trap,model_insect_sample_trap,base.group_erp_manager,1,1,1,1
+access_sex,access_sex,model_insect_sample_sex,base.group_user,1,1,1,1
+access_physical_status,access_physical_status,model_insect_sample_physical_status,base.group_user,1,1,1,1
+access_collection_status,access_collection_status,model_insect_sample_collection_status,base.group_user,1,1,1,1

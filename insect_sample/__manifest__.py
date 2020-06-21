@@ -20,13 +20,14 @@
         # fields
         # actions
         # reports
-
+        'reports/sticker.xml',
         # securityvehicles_brands
         'security/ir.model.access.csv',
 
         # views
         'views/insect_sample.xml',
         'views/sample.xml',
+        'views/wizard.xml',
     ],
     'installable': True,
     'auto_install': False,

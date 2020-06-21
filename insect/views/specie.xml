@@ -8,11 +8,11 @@
             <form string="Specie Form">
                 <sheet>
                     <group>
-                        <h1><field name="name"/></h1>
+                        <h1><field name="name_display"/></h1>
                     </group>
                     <group>
                         <group>
-                            <field name="specie"/>
+                            <field name="name"/>
                             <field name="genus_id"/>
                             <field name="tribe_id"/>
                         </group>
@@ -57,14 +57,15 @@
         <field name="model">insect.specie</field>
         <field name="arch" type="xml">
             <tree string="Specie Tree">
-                <field name="name"/>
+                <field name="name_display"/>
                 <field name="super_family_id"/>
                 <field name="family_id"/>
                 <field name="sub_family_id"/>
                 <field name="tribe_id"/>
+                <field name="genus_id"/>
+                <field name="name"/>
             </tree>
         </field>
     </record>
 
 </odoo>
-

@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_project_user,access_project,model_project_ulb_project,base.group_user,1,0,0,0
 
-access_project,access_project,model_project_ulb_project,base.group_erp_manager,1,1,1,0
+access_project,access_project,model_project_ulb_project,base.group_erp_manager,1,1,1,1

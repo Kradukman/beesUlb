@@ -19,20 +19,20 @@ access_be_iucn_status_user,access_be_iucn_status,model_insect_be_iucn_status,bas
 access_introduced_user,access_introduced,model_insect_introduced,base.group_user,1,0,0,0
 
 
-access_super_family,access_super_family,model_insect_super_family,base.group_erp_manager,1,1,1,0
-access_family,access_family,model_insect_family,base.group_erp_manager,1,1,1,0
-access_sub_family,access_sub_family,model_insect_sub_family,base.group_erp_manager,1,1,1,0
-access_tribe,access_tribe,model_insect_tribe,base.group_erp_manager,1,1,1,0
-access_genus,access_genus,model_insect_genus,base.group_erp_manager,1,1,1,0
-access_nesting,access_nesting,model_insect_nesting,base.group_erp_manager,1,1,1,0
-access_specie,access_specie,model_insect_specie,base.group_erp_manager,1,1,1,0
-access_sub_specie,access_sub_specie,model_insect_sub_specie,base.group_erp_manager,1,1,1,0
-access_sociality,access_sociality,model_insect_sociality,base.group_erp_manager,1,1,1,0
-access_pollen_transport,access_pollen_transport,model_insect_pollen_transport,base.group_erp_manager,1,1,1,0
-access_tongue,access_tongue,model_insect_tongue,base.group_erp_manager,1,1,1,0
-access_season,access_season,model_insect_season,base.group_erp_manager,1,1,1,0
-access_lecty,access_lecty,model_insect_lecty,base.group_erp_manager,1,1,1,0
-access_diet_breath,access_diet_breath,model_insect_diet_breath,base.group_erp_manager,1,1,1,0
-access_eu_iucn_status,access_eu_iucn_status,model_insect_eu_iucn_status,base.group_erp_manager,1,1,1,0
-access_be_iucn_status,access_be_iucn_status,model_insect_be_iucn_status,base.group_erp_manager,1,1,1,0
-access_introduced,access_introduced,model_insect_introduced,base.group_erp_manager,1,1,1,0
+access_super_family,access_super_family,model_insect_super_family,base.group_erp_manager,1,1,1,1
+access_family,access_family,model_insect_family,base.group_erp_manager,1,1,1,1
+access_sub_family,access_sub_family,model_insect_sub_family,base.group_erp_manager,1,1,1,1
+access_tribe,access_tribe,model_insect_tribe,base.group_erp_manager,1,1,1,1
+access_genus,access_genus,model_insect_genus,base.group_erp_manager,1,1,1,1
+access_nesting,access_nesting,model_insect_nesting,base.group_erp_manager,1,1,1,1
+access_specie,access_specie,model_insect_specie,base.group_erp_manager,1,1,1,1
+access_sub_specie,access_sub_specie,model_insect_sub_specie,base.group_erp_manager,1,1,1,1
+access_sociality,access_sociality,model_insect_sociality,base.group_erp_manager,1,1,1,1
+access_pollen_transport,access_pollen_transport,model_insect_pollen_transport,base.group_erp_manager,1,1,1,1
+access_tongue,access_tongue,model_insect_tongue,base.group_erp_manager,1,1,1,1
+access_season,access_season,model_insect_season,base.group_erp_manager,1,1,1,1
+access_lecty,access_lecty,model_insect_lecty,base.group_erp_manager,1,1,1,1
+access_diet_breath,access_diet_breath,model_insect_diet_breath,base.group_erp_manager,1,1,1,1
+access_eu_iucn_status,access_eu_iucn_status,model_insect_eu_iucn_status,base.group_erp_manager,1,1,1,1
+access_be_iucn_status,access_be_iucn_status,model_insect_be_iucn_status,base.group_erp_manager,1,1,1,1
+access_introduced,access_introduced,model_insect_introduced,base.group_erp_manager,1,1,1,1

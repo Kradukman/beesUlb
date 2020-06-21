@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 {
     'name': 'insect_ulb',
-    'version': '13.0',
+    'version': '13.1',
     'description': """Manage insect""",
 
     'depends': [
@@ -20,7 +20,6 @@
         'security/ir.model.access.csv',
 
         # views
-        'views/insect.xml',
         'views/specie.xml',
         'views/sub_specie.xml',
         'views/genus.xml',
@@ -28,6 +27,8 @@
         'views/super_family.xml',
         'views/sub_family.xml',
         'views/tribe.xml',
+        'views/insect.xml',
+        'views/wizard.xml',
     ],
     'installable': True,
     'auto_install': False,

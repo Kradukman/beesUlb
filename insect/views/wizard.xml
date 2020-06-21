@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_insect_super_family_import_wizard_form" model="ir.ui.view">
+        <field name="name">insect.import.wizard.form</field>
+        <field name="model">insect.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Super Family Import Wizard Form">
+                <sheet>
+                    <h1>Import</h1>
+                    <group>
+                        <group>
+                            <field name="csv_file"/>
+                            <field name="start_line"/>
+                            <field name="separator"/>
+                            <label for="super_family_col"/>
+                            <div>
+                                <field name="has_super_family" class="oe_inline"/>
+                                <field name="super_family_col" class="oe_inline" attrs="{'invisible': [('has_super_family','=',False)]}"/>
+                            </div>
+                            <label for="family_col"/>
+                            <div>
+                                <field name="has_family" class="oe_inline"/>
+                                <field name="family_col" class="oe_inline" attrs="{'invisible': [('has_family','=',False)]}"/>
+                            </div>
+                            <label for="position_col"/>
+                            <div>
+                                <field name="has_position" class="oe_inline"/>
+                                <field name="position_col" class="oe_inline" attrs="{'invisible': [('has_family','=',False)]}"/>
+                            </div>
+                            <label for="sub_family_col"/>
+                            <div>
+                                <field name="has_sub_family" class="oe_inline"/>
+                                <field name="sub_family_col" class="oe_inline" attrs="{'invisible': [('has_sub_family','=',False)]}"/>
+                            </div>
+                            <label for="tribe_col"/>
+                            <div>
+                                <field name="has_tribe" class="oe_inline"/>
+                                <field name="tribe_col" class="oe_inline" attrs="{'invisible': [('has_tribe','=',False)]}"/>
+                            </div>
+                            <label for="genus_col"/>
+                            <div>
+                                <field name="has_genus" class="oe_inline"/>
+                                <field name="genus_col" class="oe_inline" attrs="{'invisible': [('has_genus','=',False)]}"/>
+                            </div>
+                            <label for="specie_col"/>
+                            <div>
+                                <field name="has_specie" class="oe_inline"/>
+                                <field name="specie_col" class="oe_inline" attrs="{'invisible': [('has_specie','=',False)]}"/>
+                                <div attrs="{'invisible': [('has_specie','=',False)]}">
+                                    <group>
+                                        <label for="itd_col"/>
+                                        <div>
+                                            <field name="has_itd" class="oe_inline"/>
+                                            <field name="itd_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="nesting_col"/>
+                                        <div>
+                                            <field name="has_nesting" class="oe_inline"/>
+                                            <field name="nesting_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="sociality_col"/>
+                                        <div>
+                                            <field name="has_sociality" class="oe_inline"/>
+                                            <field name="sociality_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="pollen_transport_col"/>
+                                        <div>
+                                            <field name="has_pollen_transport" class="oe_inline"/>
+                                            <field name="pollen_transport_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="tongue_col"/>
+                                        <div>
+                                            <field name="has_tongue" class="oe_inline"/>
+                                            <field name="tongue_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="season_col"/>
+                                        <div>
+                                            <field name="has_season" class="oe_inline"/>
+                                            <field name="season_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="lecty_col"/>
+                                        <div>
+                                            <field name="has_lecty" class="oe_inline"/>
+                                            <field name="lecty_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="diet_breath_col"/>
+                                        <div>
+                                            <field name="has_diet_breath" class="oe_inline"/>
+                                            <field name="diet_breath_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="eu_iucn_status_col"/>
+                                        <div>
+                                            <field name="has_eu_iucn_status" class="oe_inline"/>
+                                            <field name="eu_iucn_status_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="be_iucn_status_col"/>
+                                        <div>
+                                            <field name="has_be_iucn_status" class="oe_inline"/>
+                                            <field name="be_iucn_status_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="introduced_col"/>
+                                        <div>
+                                            <field name="has_introduced" class="oe_inline"/>
+                                            <field name="introduced_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                        <label for="comment_col"/>
+                                        <div>
+                                            <field name="has_comment" class="oe_inline"/>
+                                            <field name="comment_col" class="oe_inline" attrs="{'invisible': [('has_nesting','=',False)]}"/>
+                                        </div>
+                                    </group>
+                                </div>
+                            </div>
+                            <label for="sub_specie_col"/>
+                            <div>
+                                <field name="has_sub_specie" class="oe_inline"/>
+                                <field name="sub_specie_col" class="oe_inline" attrs="{'invisible': [('has_sub_specie','=',False)]}"/>
+                            </div>
+                        </group>
+                    </group>
+                    <button name="action_import" string="import" type="object" class="btn btn-primary"/>
+                    <hr/>
+                    <notebook>
+                        <page name="message" string="Message">
+                            <group>
+                                <field name="error_message"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

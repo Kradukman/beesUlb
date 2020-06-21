@@ -3,7 +3,7 @@ from odoo import api, fields, models, _
 
 class InsectSubSpecie(models.Model):
     _name = "insect.sub.specie"
-    _description = "Insect Specie"
+    _description = "Insect Sub Specie"
 
     name = fields.Char('Insect Sub Specie Name', required=True)
     specie_id = fields.Many2one('insect.specie', string='Specie', required=True)

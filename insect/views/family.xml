@@ -24,8 +24,9 @@
         <field name="model">insect.family</field>
         <field name="arch" type="xml">
             <tree string="Family Tree">
-                <field name="name"/>
                 <field name="super_family_id"/>
+                <field name="name"/>
+                <field name="position"/>
             </tree>
         </field>
     </record>

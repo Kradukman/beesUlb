@@ -5,3 +5,4 @@ from . import tribe
 from . import genus
 from . import specie
 from . import sub_specie
+from . import wizard
