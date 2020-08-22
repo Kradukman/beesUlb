@@ -346,7 +346,7 @@ class InsectSampleImportWizard(models.TransientModel):
         self.ensure_one()
         if not element_name:
             return False
-        element_id = self.env[element_model].search([('name','=',element_name)])
+        element_id = self.env[element_model].search([('name','=',element_name)])[0]
         return element_id
 
     def get_element_with_parent(self, parent_id, parent_field_name, 
