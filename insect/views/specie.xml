@@ -7,9 +7,12 @@
         <field name="arch" type="xml">
             <form string="Specie Form">
                 <sheet>
-                    <group>
-                        <h1><field name="name_display"/></h1>
-                    </group>
+                    <field name="picture" widget="image" class="oe_avatar" options="{'zoom': True}"/>
+                    <div class="oe_title">
+                        <group>
+                            <h1><field name="name_display"/></h1>
+                        </group>
+                    </div>
                     <group>
                         <group>
                             <field name="name"/>
@@ -46,6 +49,9 @@
                                 <field name="comment" widget="html"/>
                             </group>
                         </page>
+                        <page name="image" string="Picture">
+                            <field name="picture" widget="image"/>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
@@ -56,7 +62,7 @@
         <field name="name">insect.specie.tree</field>
         <field name="model">insect.specie</field>
         <field name="arch" type="xml">
-            <tree string="Specie Tree">
+            <tree string="Specie Tree" multi_edit="1" import="false">
                 <field name="name_display"/>
                 <field name="super_family_id"/>
                 <field name="family_id"/>
@@ -68,4 +74,22 @@
         </field>
     </record>
 
+    <record id="specie_search_view" model="ir.ui.view">
+        <field name="name">insect.specie.search</field>
+        <field name="model">insect.specie</field>
+        <field name="arch" type="xml">
+            <search string="Specie">
+                <field name="name" string="Name" />
+                <field name="name_display" string="Binomial" />
+                <field name="super_family_id" string="Super Family" />
+                <field name="family_id" string="Family" />
+                <field name="sub_family_id" string="Sub Family" />
+                <field name="tribe_id" string="Tribe" />
+                <field name="genus_id" string="Genus" />
+                <group expand="1" string="Group By">
+                    <filter string="Genus" name="genus" context="{'group_by':'genus_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
 </odoo>

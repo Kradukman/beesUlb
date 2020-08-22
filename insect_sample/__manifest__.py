@@ -14,6 +14,9 @@
         'project_ulb',
     ],
     'data': [
+        # security
+        'security/ir.model.access.csv',
+        'security/insect_sample_rules.xml',
         # assets
         # models
 
@@ -21,8 +24,6 @@
         # actions
         # reports
         'reports/sticker.xml',
-        # securityvehicles_brands
-        'security/ir.model.access.csv',
 
         # views
         'views/insect_sample.xml',

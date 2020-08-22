@@ -1,26 +1,113 @@
 <?xml version="1.0"?>
 <odoo>
+    <template id="assets_common" name="insect_sample_assets" inherit_id="web.report_assets_common">
+        <xpath expr="." position="inside">
+            <link href="/insect_sample/static/src/css/insect_sample.css" rel="stylesheet"/>
+        </xpath>
+    </template>
+
     <report
-        id="action_report_sticker_print"
-        string="Insect sample sticker to print"
+        id="action_print_sticker_1"
+        string="Insect sample print sticker 1"
         model="insect.sample.sample"
         report_type="qweb-pdf"
-        file="insect_sample.report_template_sticker_print"
-        name="insect_sample.report_template_sticker_print"
+        file="insect_sample.report_template_sticker_1_print"
+        name="insect_sample.report_template_sticker_1_print"
         />
 
-    <record id="insect_sample.action_report_sticker_print" model="ir.actions.report">
+    <record id="insect_sample.action_print_sticker_1" model="ir.actions.report">
         <field name="paperformat_id" ref="base.paperformat_euro"/>
     </record>
 
-     <template id="insect_sample.report_template_sticker_print">
-        <t t-call="web.html_container">
+    <report
+        id="action_print_sticker_2"
+        string="Insect sample print sticker 2"
+        model="insect.sample.sample"
+        report_type="qweb-pdf"
+        file="insect_sample.report_template_sticker_2_print"
+        name="insect_sample.report_template_sticker_2_print"
+        />
+
+    <record id="insect_sample.action_print_sticker_2" model="ir.actions.report">
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
+    <report
+        id="action_print_sticker_3"
+        string="Insect sample print sticker 3"
+        model="insect.sample.sample"
+        report_type="qweb-pdf"
+        file="insect_sample.report_template_sticker_3_print"
+        name="insect_sample.report_template_sticker_3_print"
+        />
+
+    <record id="insect_sample.action_print_sticker_3" model="ir.actions.report">
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
+    <template id="insect_sample.report_template_sticker_1_print">
+        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/fonts.scss"/>
+        <t t-call="web._assets_bootstrap"/>
+        <t t-call="web.basic_layout">
             <div class="page">
-                <t t-foreach="docs" t-as="o">
-                        <t t-esc="o.name"/>
-                </t>
+                <div class="container">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="sticker">
+                            <t t-esc="o.city_id.name"/> (<t t-esc="o.city_id.country_id.code"/>)<br/>
+                            <t t-esc="o.sampling_date"/><br/>
+                            Leg <t t-esc="o.sampler_id.name"/><br/>
+                            <t t-esc="o.project_id.name"/><br/>
+                        </div>
+                    </t>
+                </div>       
             </div>
         </t>
     </template>
 
+    <template id="insect_sample.report_template_sticker_2_print">
+        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/fonts.scss"/>
+        <t t-call="web._assets_bootstrap"/>
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <div class="container">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="sticker">
+                            <t t-esc="o.name"/><br/>
+                            <t t-if="o.place_id.latitude &gt; 0">
+                                N
+                            </t>
+                            <t t-if="o.place_id.latitude &lt; 0">
+                                S
+                            </t>
+                            <t t-esc="o.place_id.latitude"/><br/>
+                            <t t-if="o.place_id.latitude &gt; 0">
+                                E
+                            </t>
+                            <t t-if="o.place_id.latitude &lt; 0">
+                                O
+                            </t>
+                            <t t-esc="o.place_id.longitude"/><br/>
+                            <t t-esc="o.trap_id.name"/><br/>
+                        </div>  
+                    </t>
+                </div>       
+            </div>
+        </t>
+    </template>
+
+    <template id="insect_sample.report_template_sticker_3_print">
+        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/fonts.scss"/>
+        <t t-call="web._assets_bootstrap"/>
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <div class="container">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="sticker">
+                            <t t-esc="o.identifier_id.name"/><br/>
+                        </div>
+                    </t>
+                </div>       
+            </div>
+        </t>
+    </template>
 </odoo>

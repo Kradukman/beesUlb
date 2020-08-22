@@ -1,79 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>insect
 
-        <record model="ir.ui.view" id="view_sample_form">
-            <field name="name">insect.sample.sample.form</field>
-            <field name="model">insect.sample.sample</field>
-            <field name="arch" type="xml">
-                <form string="Sample Form">
-                    <header>
-                        <field name="id" invisible="1"/>
-                        <button name="open_duplicate_wizard" string="Duplicate" type="object" class="btn-primary"/>
-                        <field name="state" widget="statusbar" statusbar_visible="draft,validated"/>
-                    </header>
-                    <sheet>
-                        <h1><field name="name"/></h1>
+    <record model="ir.ui.view" id="view_sample_form">
+        <field name="name">insect.sample.sample.form</field>
+        <field name="model">insect.sample.sample</field>
+        <field name="arch" type="xml">
+            <form string="Sample Form">
+                <header>
+                    <field name="id" invisible="1"/>
+                    <button name="open_duplicate_wizard" string="Duplicate Multi" type="object" class="btn-primary"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,validated"/>
+                </header>
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <group>
                         <group>
-                            <group>
-                                <field name="project_id"/>
-                                <field name="place_id" domain="[('project_ids', 'in', project_id)]"/>
-                                <field name="sampler_id"/>
-                                <field name="trap_id"/>
-                                <field name="sampling_date"/>
-                                <field name="physical_status_id"/>
-                            </group>
+                            <field name="project_id" domain="[
+                                '|', 
+                                ('leader_ids.user_ids', 'in', [uid]), 
+                                ('member_ids.user_ids', 'in', [uid])
+                            ]"/>
+                            <field name="place_id" domain="[('project_ids', 'in', project_id)]"/>
+                            <field name="sampler_id"/>
+                            <field name="trap_id"/>
+                            <field name="sampling_date"/>
+                            <field name="physical_status_id"/>
                         </group>
-                        <notebook>
-                            <page name="place" string="Place">
+                    </group>
+                    <notebook>
+                        <page name="place" string="Place">
+                            <group>
+                                <h2>Place</h2>
+                                <field name="city_id"/>
+                                <field name="state_id"/>
+                                <field name="country_id"/>
+                            </group>
+                        </page>
+                        <page name="insect" string="Insect">
+                            <group>
+                                <h2>Insect</h2>
                                 <group>
-                                    <h2>Place</h2>
-                                    <field name="city_id"/>
-                                    <field name="state_id"/>
-                                    <field name="country_id"/>
+                                    <field name="identifier_id"/>
+                                    <field name="specie_id"/>
+                                    <field name="genus_id"/>
+                                    <field name="sex_id"/>
                                 </group>
-                            </page>
-                            <page name="insect" string="Insect">
-                                <group>
-                                    <h2>Insect</h2>
-                                    <group>
-                                        <field name="identifier_id"/>
-                                        <field name="specie_id"/>
-                                        <field name="genus_id"/>
-                                        <field name="sex_id"/>
-                                    </group>
-                                </group>
-                            </page>
-                            <page name="plant" string="Plant">
-                                <group>
-                                    <h2>Plant</h2>
-                                    <field name="plant_id"/>
-                                    <field name="plant_genus_id"/>
-                                    <field name="plant_family_id"/>
-                                </group>
-                            </page>
-                            <page name="other_info" string="Other info">
-                                <group>
-                                    <field name="legacy_name"/>
-                                </group>
-                            </page>
-                        </notebook>
-                    </sheet>
-                    <div class="oe_chatter">
-                        <field name="message_follower_ids" widget="mail_followers"/>
-                        <field name="activity_ids" widget="mail_activity"/>
-                        <field name="message_ids" widget="mail_thread"/>
-                    </div>
-                </form>
-            </field>
-        </record>
+                            </group>
+                        </page>
+                        <page name="plant" string="Plant">
+                            <group>
+                                <h2>Plant</h2>
+                                <field name="plant_id"/>
+                                <field name="plant_genus_id"/>
+                                <field name="plant_family_id"/>
+                            </group>
+                        </page>
+                        <page name="other_info" string="Other info">
+                            <group>
+                                <field name="legacy_name"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
 
-        <record id="view_sample_tree" model="ir.ui.view">
-            <field name="name">insect.sample.sample.tree</field>
-            <field name="model">insect.sample.sample</field>
-            <field name="arch" type="xml">
-                <tree string="Sample Tree">
-                    <field name="name"/>
-                </tree>
-            </field>
-        </record>
+    <record id="view_sample_tree" model="ir.ui.view">
+        <field name="name">insect.sample.sample.tree</field>
+        <field name="model">insect.sample.sample</field>
+        <field name="arch" type="xml">
+            <tree string="Sample Tree" multi_edit="1" import="false">
+                <field name="name"/>
+                <field name="sampler_id"/>
+                <field name="project_id"/>
+                <field name="place_id"/>
+                <field name="specie_id"/>
+                <field name="identifier_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sample_search_view" model="ir.ui.view">
+        <field name="name">insect.sample.sample.search</field>
+        <field name="model">insect.sample.sample</field>
+        <field name="arch" type="xml">
+            <search string="Sample">
+                <field name="name" string="Name" />
+                <field name="legacy_name" string="Legacy Name" />
+                <field name="genus_id" string="Genus" />
+                <field name="specie_id" string="Specie" />
+                <filter name="state_filter" string="Draft"
+                        domain="[('state','=','draft')]"/>
+                <filter name="state_filter" string="Validated"
+                        domain="[('state','=','validated')]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Species" name="specie" context="{'group_by':'specie_id'}"/>
+                    <filter string="Place" name="place" context="{'group_by':'place_id'}"/>
+                    <filter string="Project" name="project" context="{'group_by':'project_id'}"/>
+                    <filter string="Sampler" name="sampler" context="{'group_by':'sampler_id'}"/>
+                    <filter string="Identifier" name="identifier" context="{'group_by':'identifier_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
 </odoo>

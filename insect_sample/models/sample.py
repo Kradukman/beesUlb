@@ -61,7 +61,7 @@ class InsectSample(models.Model):
     # PROJECT
     project_id = fields.Many2one('project_ulb.project', string='Project', required=True, copy=True)
     year = fields.Integer('Year', related='project_id.year', readonly=True)
-    project_leader_ids = fields.Many2many('res.partner', string='Project leader', related='project_id.leader_ids', readonly=True)
+    project_leader_ids = fields.Many2many('res.users', string='Project leader', related='project_id.leader_ids', readonly=True)
 
     # SAMPLE
     identifier_id = fields.Many2one('res.partner', string='Identifier', copy=True)

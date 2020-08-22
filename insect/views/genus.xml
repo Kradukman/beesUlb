@@ -25,7 +25,7 @@
         <field name="name">insect.genus.tree</field>
         <field name="model">insect.genus</field>
         <field name="arch" type="xml">
-            <tree string="Genus Tree">
+            <tree string="Genus Tree" multi_edit="1" import="false">
                 <field name="name"/>
                 <field name="super_family_id"/>
                 <field name="family_id"/>
@@ -35,5 +35,20 @@
         </field>
     </record>
 
+    <record id="genus_search_view" model="ir.ui.view">
+        <field name="name">insect.genus.search</field>
+        <field name="model">insect.genus</field>
+        <field name="arch" type="xml">
+            <search string="Genus">
+                <field name="name" string="Name" />
+                <field name="super_family_id" string="Super Family" />
+                <field name="family_id" string="Family" />
+                <field name="sub_family_id" string="Sub Family" />
+                <field name="tribe_id" string="Tribe" />
+                <group expand="1" string="Group By">
+                    <filter string="Sub Family" name="sub_family" context="{'group_by':'sub_family_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
 </odoo>
-

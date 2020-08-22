@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_user_sample_read_rule" model="ir.rule">
+        <field name="name">User has access to own sample</field>
+        <field name="model_id" ref="model_insect_sample_sample"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">[
+            ('create_uid', '=', user.id)
+        ]</field>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="group_admin_sample_visibility_rule" model="ir.rule">
+        <field name="name">Master admin has full access to all visibilities</field>
+        <field name="model_id" ref="model_insect_sample_sample"/>
+        <field name="groups" eval="[(4, ref('base.group_erp_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+</odoo>

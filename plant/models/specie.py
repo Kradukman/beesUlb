@@ -8,3 +8,4 @@ class PlantSpecie(models.Model):
     name = fields.Char('Plant Specie Name', required=True)
     genus_id = fields.Many2one('plant.genus', string='Genus', required=True)
     family_id = fields.Many2one(string='Family', related='genus_id.family_id', readonly=True)
+    picture = fields.Binary('Picture', store=True)

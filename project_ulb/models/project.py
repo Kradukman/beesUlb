@@ -7,7 +7,8 @@ class ULBProject(models.Model):
     name = fields.Char('Project', required=True)
     year = fields.Integer('Year', required=True, default=2019)
     site_ids = fields.Many2many('place.place', string='Sites')
-    leader_ids = fields.Many2many('res.partner', string='Leader', required=True)
+    leader_ids = fields.Many2many('res.partner', 'rel_leader_project', string='Leader', required=True)
+    member_ids = fields.Many2many('res.partner', 'rel_member_project', string='Member')
 
 
 class PlacePlace(models.Model):

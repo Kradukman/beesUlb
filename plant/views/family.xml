@@ -14,13 +14,22 @@
     </record>
 
     <record id="view_family_tree" model="ir.ui.view">
-            <field name="name">plant.family.tree</field>
-            <field name="model">plant.family</field>
-            <field name="arch" type="xml">
-                <tree string="Family Tree">
-                    <field name="name"/>
-                </tree>
-            </field>
-        </record>
+        <field name="name">plant.family.tree</field>
+        <field name="model">plant.family</field>
+        <field name="arch" type="xml">
+            <tree string="Family Tree" multi_edit="1" import="false">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
 
+    <record id="family_search_view" model="ir.ui.view">
+        <field name="name">plant.family.search</field>
+        <field name="model">plant.family</field>
+        <field name="arch" type="xml">
+            <search string="Family">
+                <field name="name" string="Name" />
+            </search>
+        </field>
+    </record>
 </odoo>

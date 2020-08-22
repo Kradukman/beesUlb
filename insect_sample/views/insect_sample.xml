@@ -75,19 +75,19 @@
           its parent openacademy_menu and *after* its
           action course_list_action -->
      <menuitem id="insect_sample_project_menu" name="Project" parent="main_insect_sample_menu"
-          action="insect_sample_project_list_action"/>
-     <menuitem id="insect_sample_place_menu" name="Project" parent="main_insect_sample_menu"
-               action="insect_sample_place_list_action"/>
+          action="insect_sample_project_list_action" groups="base.group_erp_manager"/>
+     <menuitem id="insect_sample_place_menu" name="Place" parent="main_insect_sample_menu"
+               action="insect_sample_place_list_action" groups="base.group_erp_manager"/>
      <menuitem id="insect_sample_sample_menu" name="Sample" parent="insect_sample_menu"
                action="insect_sample_sample_list_action"/>
      <menuitem id="insect_sample_sex_menu" name="Sex" parent="insect_sample_menu"
-               action="insect_sample_sex_list_action"/>
+               action="insect_sample_sex_list_action" groups="base.group_erp_manager"/>
      <menuitem id="insect_sample_trap_menu" name="Trap" parent="insect_sample_menu"
-               action="insect_sample_trap_list_action"/>
+               action="insect_sample_trap_list_action" groups="base.group_erp_manager"/>
      <menuitem id="insect_sample_physical_status_menu" name="Physical Status" parent="insect_sample_menu"
-               action="insect_sample_physical_status_list_action"/>
+               action="insect_sample_physical_status_list_action" groups="base.group_erp_manager"/>
      <menuitem id="insect_sample_collection_status_menu" name="Collection Status" parent="insect_sample_menu"
-               action="insect_sample_collection_status_list_action"/>
+               action="insect_sample_collection_status_list_action" groups="base.group_erp_manager"/>
      
         <!-- Full id location:
              action="openacademy.course_list_action"

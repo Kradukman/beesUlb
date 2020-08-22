@@ -23,7 +23,7 @@
         <field name="name">insect.sub.family.tree</field>
         <field name="model">insect.sub.family</field>
         <field name="arch" type="xml">
-            <tree string="Sub Family Tree">
+            <tree string="Sub Family Tree" multi_edit="1" import="false">
                 <field name="name"/>
                 <field name="super_family_id"/>
                 <field name="family_id"/>
@@ -31,4 +31,19 @@
         </field>
     </record>
 
+    <record id="sub_family_search_view" model="ir.ui.view">
+        <field name="name">insect.sub.family.search</field>
+        <field name="model">insect.sub.family</field>
+        <field name="arch" type="xml">
+            <search string="Sub Family">
+                <field name="name" string="Name" />
+                <field name="super_family_id" string="Super Family" />
+                <field name="family_id" string="Family" />
+                <group expand="1" string="Group By">
+                    <filter string="Super Family" name="Super Family" context="{'group_by':'super_family_id'}"/>
+                    <filter string="Family" name="Family" context="{'group_by':'family_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
 </odoo>

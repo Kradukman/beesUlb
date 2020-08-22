@@ -56,11 +56,35 @@
         <field name="name">place.place.tree</field>
         <field name="model">place.place</field>
         <field name="arch" type="xml">
-            <tree string="Place Tree">
+            <tree string="Place Tree" multi_edit="1">
                 <field name="name"/>
                 <field name="owner_id"/>
+                <field name="type_id"/>
+                <field name="city_id"/>
+                <field name="country_id"/>
+                <field name="crop_id"/>
             </tree>
         </field>
     </record>
-</odoo>
 
+    <record id="place_search_view" model="ir.ui.view">
+        <field name="name">place.place.search</field>
+        <field name="model">place.place</field>
+        <field name="arch" type="xml">
+            <search string="Place">
+                <field name="name" string="Name" />
+                <field name="owner_id" string="Owner" />
+                <field name="city_id" string="City" />
+                <field name="state_id" string="State" />
+                <field name="country_id" string="Country" />
+                <field name="country_code" string="Country Code" />
+                <field name="type_id" string="Type" />
+                <field name="crop_id" string="Crop" />
+                <group expand="1" string="Group By">
+                    <filter string="Type" name="type" context="{'group_by':'type_id'}"/>
+                    <filter string="Crop" name="crop" context="{'group_by':'crop_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

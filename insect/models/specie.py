@@ -96,6 +96,7 @@ class InsectSpecie(models.Model):
     be_iucn_status_id = fields.Many2one('insect.be.iucn.status', string='BE IUCN status')
     introduced_id = fields.Many2one('insect.introduced', string='Introduced')
     comment = fields.Char('Comment')
+    picture = fields.Binary('Picture', store=True)
 
     @api.depends('name', 'genus_id.name')
     def _compute_name_display(self):

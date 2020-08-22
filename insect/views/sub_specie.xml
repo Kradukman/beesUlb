@@ -27,7 +27,7 @@
         <field name="name">insect.sub.specie.tree</field>
         <field name="model">insect.sub.specie</field>
         <field name="arch" type="xml">
-            <tree string="Sub Specie Tree">
+            <tree string="Sub Specie Tree" import="false">
                 <field name="name"/>
                 <field name="super_family_id"/>
                 <field name="family_id"/>

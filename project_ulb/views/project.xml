@@ -19,12 +19,21 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Sites">
-                            <field name="site_ids">
-                                <tree>
+                        <page string="Members">
+                            <group>
+                                <field name="member_ids">
                                     <field name="name"/>
-                                </tree>
-                            </field>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Sites">
+                            <group>
+                                <field name="site_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
@@ -37,11 +46,23 @@
         <field name="name">project_ulb.project.tree</field>
         <field name="model">project_ulb.project</field>
         <field name="arch" type="xml">
-            <tree string="Place Tree">
+            <tree string="Place Tree" multi_edit="1">
                 <field name="name"/>
                 <field name="year"/>
             </tree>
         </field>
     </record>
 
+    <record id="project_ulb_search_view" model="ir.ui.view">
+        <field name="name">project_ulb.project.search</field>
+        <field name="model">project_ulb.project</field>
+        <field name="arch" type="xml">
+            <search string="Project">
+                <field name="name" string="Name" />
+                <field name="year" string="Year" />
+                <field name="site_ids" string="Site" />
+                <field name="leader_ids" string="Leader" />
+            </search>
+        </field>
+    </record>
 </odoo>

@@ -17,11 +17,19 @@
         <field name="name">insect.super.family.tree</field>
         <field name="model">insect.super.family</field>
         <field name="arch" type="xml">
-            <tree string="Super Family Tree">
+            <tree string="Super Family Tree" multi_edit="1" import="false">
                 <field name="name"/>
             </tree>
         </field>
     </record>
 
-
+    <record id="super_family_search_view" model="ir.ui.view">
+        <field name="name">insect.super.family.search</field>
+        <field name="model">insect.super.family</field>
+        <field name="arch" type="xml">
+            <search string="Super Family">
+                <field name="name" string="Name" />
+            </search>
+        </field>
+    </record>
 </odoo>

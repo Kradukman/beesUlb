@@ -1,0 +1,9 @@
+.sticker {
+    /* margin: 10mm; */
+    border: 0.5mm solid black;
+    text-align: center;
+    padding-top: 0.5mm;
+    width: 14.2mm; height: 9.1mm;
+    font-size: 1mm;
+    float:left;
+}
